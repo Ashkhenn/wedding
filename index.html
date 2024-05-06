@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="icon" type="image/x-icon" href="./images/ic.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Dancing+Script:wght@400..700&family=Pacifico&family=Parisienne&display=swap" rel="stylesheet">
+
+    <title>Hayk & Qnar</title>
+</head>
+<body>
+
+    <div class="back">
+        
+        <div class="language-buttons">
+            <button class="langBut" onclick="switchToRussian()">ру</button>
+            <button id="erku" class="langBut" onclick="switchToArmenian()">հայ</button>
+        </div>
+        <div class="audio-container">
+            <!-- <img src="./images/heart.png" width="70px"> -->
+            <img src="./images/whiteCircle.png" width="70px">
+            <audio id="backgroundMusic" autoplay="true" controlslist="nodownload" loop>
+            <source src="audio/Marry You.mp3" type="audio/mpeg">
+            </audio>
+            <div class="audio-control">
+                <button id="toggleButton" onclick="toggleAudio()">
+                    <span id="playIcon" class="icon">&#9658;</span>
+                    <span id="pauseIcon" class="icon">&#10074;&#10074;</span> 
+                </button>
+            </div>
+        </div>
+
+        <header>
+            <div id="HaykQnar"> 
+                <h1>Հայկ Hayk</h1>
+                    <h4>&</h4>
+                <h1>Քնար Qnar</h1>
+            </div>
+
+            <div class="hraviratoms">
+                <h2>02.06.2024</h2>
+                <h2 id="hrText">Հրավիրատոմս</h2>
+            </div>
+
+        <div id="countdown">
+            <table>
+                <tbody id="table">
+                    <tr>
+                        <td id="days"></td>
+                        <td id="hours"></td>
+                        <td id="minutes"></td>
+                        <td id="seconds"></td>
+                    </tr>
+                    <tr>
+                        <td id="daysLabel">Օր</td>
+                        <td id="hoursLabel">Ժամ</td>
+                        <td id="minutesLabel">Րոպե</td>
+                        <td id="secondsLabel">Վայրկյան</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 id="startedText" style="display: none;">Բարի ժամանց!</h2>
+        </div>
+        
+        <div class="buttons" id="buttonsContainer" style="display: none;">
+            <button onclick="scrollDown('days')">Օր</button>
+            <button onclick="scrollDown('hours')">Ժամ</button>
+            <button onclick="scrollDown('minutes')">Րոպե</button>
+        </div>
+        </header>
+    </div>
+
+
+    <!-- <div class="full">
+
+        <div class="text">
+            <h2 id="invite">Սիրով հրավիրում ենք միասին նշելու մեր հարսանյաց հանդեսը</h2>
+        </div>
+
+        <div class="text">
+            <h1>13:30</h1>
+            <h2 id="leak">լճաշեն ծովափ, սևան 8/45 բլա բլա </h2>
+            <a href="https://yandex.com/maps/-/CDV0VX1q" target="_blank"><button id="map1">տեսնել քարտեզում</button></a>
+        </div>
+
+        <div class="text">
+            <h1>15:30</h1>
+            <h2 id="ekex">եկեղեցի Այրիվանք, հասցե Սևան բլաբլաբլա 13</h2>
+            <a href="https://yandex.com/maps/-/CDV06NOl" target="_blank"><button id="map2">տեսնել քարտեզում</button></a>
+        </div>
+
+        <div class="text">
+            <h1>17:00</h1>
+            <h2 id="srah">հարսանըաց սրահ darling, հասցե Սևան բլալալա 13</h2>
+            <a href="https://yandex.com/maps/-/CDV0bA-L" target="_blank"><button id="map3">տեսնել քարտեզում</button></a>
+        </div>
+
+    </div> -->
+
+
+    <div class="newFull">
+
+        <div class="newText" id="sirov">
+            <div class="nkar">
+                <img src="./images/couple.png" width="150px">
+            </div>
+            <h2 id="invite">Սիրով հրավիրում ենք միասին նշելու մեր հարսանյաց հանդեսը</h2>
+        </div>
+
+        <div class="newText">
+            <img src="./images/rings.png" width="100px">
+            <h1 id="jam1">ժամը՝ 13:30</h1>
+            <h1 id="zags">Զագսի արարողություն</h1>
+            <h1 id="leak">Սևանի ափին</h1>
+            <a href="https://yandex.com/maps/-/CDV0VX1q" target="_blank"><button id="map1">Տեսնել քարտեզում</button></a>
+        </div>
+
+        <div class="newText">
+            <img src="./images/ekexeci.png" width="100px">
+            <h1 id="jam2">ժամը՝ 15:30</h1>
+            <h1 id="psak">Պսակադրություն</h1>
+            <h1 id="ekex">Հայրիվանքի եկեղեցի</h1>
+            <a href="https://yandex.com/maps/-/CDV06NOl" target="_blank"><button id="map2">Տեսնել քարտեզում</button></a>
+        </div>
+
+        <div class="newText">
+            <img src="./images/Daco_5634855.png" width="100px">
+            <h1 id="jam3">ժամը՝ 17:30</h1>
+            <h1 id="tjik">Հարսանեկան խնջույք</h1>
+            <h1 id="srah">Darling hall ռեստորան</h1>
+            <a href="https://yandex.com/maps/-/CDV0bA-L" target="_blank"><button id="map3">Տեսնել քարտեզում</button></a>
+        </div>
+
+    </div>
+
+</body>
+<script src="js/js.js"></script>
+</html>
