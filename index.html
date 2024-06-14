@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:url" content="https://haykqnar.github.io/harsaniq/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Հայկ & Քնար">
+    <meta property="og:image" content="https://drive.google.com/file/d/1okv-ZuGCAd8mU0HQWOBZ80_fIpus_IHV">
+
+
     <link rel="stylesheet" href="css/css.css">
     <link rel="icon" type="image/x-icon" href="./images/ic.png">
 
@@ -14,21 +21,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Dancing+Script:wght@400..700&family=Pacifico&family=Parisienne&display=swap" rel="stylesheet">
 
-    <title>Hayk & Qnar</title>
+    <title>Հայկ & Քնար</title>
 </head>
 <body>
 
     <div class="back">
-        
+
         <div class="language-buttons">
             <button class="langBut" onclick="switchToRussian()">ру</button>
             <button id="erku" class="langBut" onclick="switchToArmenian()">հայ</button>
+            <a href="#sirov"><button id="qartez" class="langBut" onclick="switchToArmenian()">Քարտեզ</button></a>
         </div>
         <div class="audio-container">
-            <!-- <img src="./images/heart.png" width="70px"> -->
             <img src="./images/whiteCircle.png" width="70px">
-            <audio id="backgroundMusic" autoplay="true" controlslist="nodownload" loop>
-            <source src="audio/Marry You.mp3" type="audio/mpeg">
+            <audio id="backgroundMusic"  controlslist="nodownload" loop>
+            <source src="./audio/kuzes.mp3" type="audio/mpeg">
             </audio>
             <div class="audio-control">
                 <button id="toggleButton" onclick="toggleAudio()">
@@ -40,15 +47,12 @@
 
         <header>
             <div id="HaykQnar"> 
-                <h1>Հայկ Hayk</h1>
+                <!-- <h1>Hayk</h1>
                     <h4>&</h4>
-                <h1>Քնար Qnar</h1>
+                <h1>Qnar</h1> -->
+                <img src="./images/anun.png" width="250px">
             </div>
 
-            <div class="hraviratoms">
-                <h2>02.06.2024</h2>
-                <h2 id="hrText">Հրավիրատոմս</h2>
-            </div>
 
         <div id="countdown">
             <table>
@@ -79,50 +83,30 @@
     </div>
 
 
-    <!-- <div class="full">
-
-        <div class="text">
-            <h2 id="invite">Սիրով հրավիրում ենք միասին նշելու մեր հարսանյաց հանդեսը</h2>
-        </div>
-
-        <div class="text">
-            <h1>13:30</h1>
-            <h2 id="leak">լճաշեն ծովափ, սևան 8/45 բլա բլա </h2>
-            <a href="https://yandex.com/maps/-/CDV0VX1q" target="_blank"><button id="map1">տեսնել քարտեզում</button></a>
-        </div>
-
-        <div class="text">
-            <h1>15:30</h1>
-            <h2 id="ekex">եկեղեցի Այրիվանք, հասցե Սևան բլաբլաբլա 13</h2>
-            <a href="https://yandex.com/maps/-/CDV06NOl" target="_blank"><button id="map2">տեսնել քարտեզում</button></a>
-        </div>
-
-        <div class="text">
-            <h1>17:00</h1>
-            <h2 id="srah">հարսանըաց սրահ darling, հասցե Սևան բլալալա 13</h2>
-            <a href="https://yandex.com/maps/-/CDV0bA-L" target="_blank"><button id="map3">տեսնել քարտեզում</button></a>
-        </div>
-
-    </div> -->
-
-
     <div class="newFull">
 
-        <div class="newText" id="sirov">
-            <div class="nkar">
-                <img src="./images/couple.png" width="150px">
+        <center>
+            <img src="./images/animation.gif" width="350px">
+        </center>
+        <div class="nkar">
+                <div class="newText" id="sirov">
+                <!-- <img src="./images/couple.png" width="200px"> -->
             </div>
-            <h2 id="invite">Սիրով հրավիրում ենք միասին նշելու մեր հարսանյաց հանդեսը</h2>
+            <h2 id="invite">Սիրով հրավիրում ենք միասին նշելու մեր հարսանիքը</h2>
+        </div>
+        <div class="hraviratoms">
+            <h2>02.06.2024</h2>
         </div>
 
-        <div class="newText">
+        <!-- <div class="newText">
             <img src="./images/rings.png" width="100px">
             <h1 id="jam1">ժամը՝ 13:30</h1>
             <h1 id="zags">Զագսի արարողություն</h1>
-            <h1 id="leak">Սևանի ափին</h1>
-            <a href="https://yandex.com/maps/-/CDV0VX1q" target="_blank"><button id="map1">Տեսնել քարտեզում</button></a>
-        </div>
+            <h1 id="leak">Սևանի ափին Vik-Son</h1>
+            <a href="https://maps.app.goo.gl/pAyNJSzTnu6WWe9W8" target="_blank"><button id="map1">Տեսնել քարտեզում</button></a>
+        </div> -->
 
+        
         <div class="newText">
             <img src="./images/ekexeci.png" width="100px">
             <h1 id="jam2">ժամը՝ 15:30</h1>
@@ -133,7 +117,7 @@
 
         <div class="newText">
             <img src="./images/Daco_5634855.png" width="100px">
-            <h1 id="jam3">ժամը՝ 17:30</h1>
+            <h1 id="jam3">ժամը՝ 17:00</h1>
             <h1 id="tjik">Հարսանեկան խնջույք</h1>
             <h1 id="srah">Darling hall ռեստորան</h1>
             <a href="https://yandex.com/maps/-/CDV0bA-L" target="_blank"><button id="map3">Տեսնել քարտեզում</button></a>
@@ -142,5 +126,6 @@
     </div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="js/js.js"></script>
 </html>
